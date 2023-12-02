@@ -4,7 +4,7 @@ int sum = 0;
 
 try
 {
-    StreamReader sr = new StreamReader("C:\\Users\\Magnumic\\Documents\\GitHub\\AdventOfCode2023\\input\\input.txt");
+    StreamReader sr = new StreamReader("C:\\Users\\Magnumic\\Documents\\GitHub\\AdventOfCode2023\\Day1\\Day1\\input\\input.txt");
     string inputLine = sr.ReadLine();
     while (inputLine != null)
     {
