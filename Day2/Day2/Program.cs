@@ -1,13 +1,11 @@
 ﻿List<string> inputTxt = new(File.ReadAllLines(@"..\..\..\input\input.txt"));
 
-const int redNum = 12;
-const int greenNum = 13;
-const int blueNum = 14;
-
 int sum = 0;
 
 foreach (string inputLine in inputTxt) {
-    bool gamePossible = true;
+    int redCubes = 0;
+    int greenCubes = 0;
+    int blueCubes = 0;
     
     string[] splitGame = inputLine.Split(':');
     int gameNumber = int.Parse(splitGame[0].Split(' ')[1]);
@@ -18,17 +16,18 @@ foreach (string inputLine in inputTxt) {
         
         foreach (string cube in cubes) {
             string[] splitCube = cube.Split(' ');
-            if (splitCube[2] == "red" && int.Parse(splitCube[1]) > redNum)
-                gamePossible = false;
+            if (splitCube[2] == "red" && int.Parse(splitCube[1]) > redCubes)
+                redCubes = int.Parse(splitCube[1]);
 
-            if (splitCube[2] == "green" && int.Parse(splitCube[1]) > greenNum)
-                gamePossible = false;
+            if (splitCube[2] == "green" && int.Parse(splitCube[1]) > greenCubes)
+                greenCubes = int.Parse(splitCube[1]);
 
-            if (splitCube[2] == "blue" && int.Parse(splitCube[1]) > blueNum)
-                gamePossible = false;
+            if (splitCube[2] == "blue" && int.Parse(splitCube[1]) > blueCubes)
+                blueCubes = int.Parse(splitCube[1]);
         }
     }
-    if (gamePossible) sum += gameNumber;
+
+    sum += redCubes * greenCubes * blueCubes;
 }
 
 Console.WriteLine(sum);
