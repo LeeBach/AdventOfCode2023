@@ -29,9 +29,7 @@ foreach (string card in inputTxt) {
             }
         }
     }
-        
     sum += (score / 2);
-    
 }
 
 Console.WriteLine(sum);
