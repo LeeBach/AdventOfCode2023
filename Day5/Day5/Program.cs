@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-string inputTxt = File.ReadAllText(@"..\..\..\input\inputTest.txt");
+string inputTxt = File.ReadAllText(@"..\..\..\input\input.txt");
 
 string[] delimitingStrings = {
     "seed-to-soil map:",
@@ -35,59 +35,35 @@ for (int i = 1; i <= 7; i++) {
     }
 }
 
+List<long> locations = new List<long>();
+
 foreach (string seed in seeds) {
-    int value = int.Parse(seed);
+    long value = long.Parse(seed);
     foreach (List<string> mapSet in maps) {
         foreach (string map in mapSet) {
             string[] mapSplit = map.Split(' ');
-            int destinationRange = int.Parse(mapSplit[0]);
-            int sourceRange = int.Parse(mapSplit[1]);
-            int rangeLength = int.Parse(mapSplit[2]);
-            value = Map(value, destinationRange, sourceRange, rangeLength);
+            long destinationRange = long.Parse(mapSplit[0]);
+            long sourceRange = long.Parse(mapSplit[1]);
+            long rangeLength = long.Parse(mapSplit[2]);
+            if (value != Map(value, destinationRange, sourceRange, rangeLength)) {
+                value = Map(value, destinationRange, sourceRange, rangeLength);
+                break;
+            }
         }
     }
-    Console.WriteLine(value);
+    locations.Add(value);
 }
 
-Console.WriteLine("*");
+locations.Sort();
+Console.WriteLine(locations[0]);
 
+Console.WriteLine("*");
 return;
 
 
-int Map(int value, int destinationRange, int sourceRange, int rangeLength) {
+long Map(long value, long destinationRange, long sourceRange, long rangeLength) {
     if (value >= sourceRange && value <= sourceRange + rangeLength) {
         return destinationRange + value - sourceRange;
     }
     return value;
 }
-
-/*
-int thing = 55;
-
-thing = Map(thing, 50, 98, 2);
-thing = Map(thing, 52, 50, 48);
-
-thing = Map(thing, 0, 15, 37);
-thing = Map(thing, 37, 52, 2);
-thing = Map(thing, 39, 0, 15);
-
-thing = Map(thing, 49, 53, 8);
-thing = Map(thing, 0, 11, 42);
-thing = Map(thing, 42, 0, 7);
-thing = Map(thing, 57, 7, 4);
-
-thing = Map(thing, 88, 18, 7);
-thing = Map(thing, 18, 25, 70);
-
-thing = Map(thing, 45, 77, 23);
-thing = Map(thing, 81, 45, 19);
-thing = Map(thing, 68, 64, 13);
-
-thing = Map(thing, 0, 69, 1);
-thing = Map(thing, 1, 0, 69);
-
-thing = Map(thing, 60, 56, 37);
-thing = Map(thing, 56, 93, 4);
-
-Console.WriteLine(thing);
-*/

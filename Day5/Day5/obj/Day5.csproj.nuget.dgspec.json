@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Magnu\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\Day5.csproj": {}
+    "C:\\Users\\Magnumic\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\Day5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Magnu\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\Day5.csproj": {
+    "C:\\Users\\Magnumic\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\Day5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Magnu\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\Day5.csproj",
+        "projectUniqueName": "C:\\Users\\Magnumic\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\Day5.csproj",
         "projectName": "Day5",
-        "projectPath": "C:\\Users\\Magnu\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\Day5.csproj",
-        "packagesPath": "C:\\Users\\Magnu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Magnu\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\obj\\",
+        "projectPath": "C:\\Users\\Magnumic\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\Day5.csproj",
+        "packagesPath": "C:\\Users\\Magnumic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Magnumic\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Magnumic\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
