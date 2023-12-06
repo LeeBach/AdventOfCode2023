@@ -8,23 +8,23 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Magnumic\\.nuget\\packages\\": {},
+    "C:\\Users\\Magnu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Magnumic\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\Day5.csproj",
+      "projectUniqueName": "C:\\Users\\Magnu\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\Day5.csproj",
       "projectName": "Day5",
-      "projectPath": "C:\\Users\\Magnumic\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\Day5.csproj",
-      "packagesPath": "C:\\Users\\Magnumic\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Magnumic\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\obj\\",
+      "projectPath": "C:\\Users\\Magnu\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\Day5.csproj",
+      "packagesPath": "C:\\Users\\Magnu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Magnu\\Documents\\GitHub\\AdventOfCode2023\\Day5\\Day5\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Magnumic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -66,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

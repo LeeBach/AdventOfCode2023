@@ -2,7 +2,6 @@
 
 string inputTxt = File.ReadAllText(@"..\..\..\input\inputTest.txt");
 
-/*
 string[] delimitingStrings = {
     "seed-to-soil map:",
     "soil-to-fertilizer map:",
@@ -19,20 +18,33 @@ List<string> seeds = new List<string>();
 foreach (string s in splitInput[0].Split(':')[1].Split(new char[] {'\r', '\n', ' '}, StringSplitOptions.RemoveEmptyEntries))
     seeds.Add(s);
 
-List<string> maps = new List<string>();
+List<List<string>> maps = new List<List<string>> {
+    new List<string>(),
+    new List<string>(),
+    new List<string>(),
+    new List<string>(),
+    new List<string>(),
+    new List<string>(),
+    new List<string>()
+};
 for (int i = 1; i <= 7; i++) {
     string[] mapSetArray = splitInput[i].Split(new char[] {'\r', '\n'}, StringSplitOptions.RemoveEmptyEntries);
     string mapSetString = "";
     foreach (string s in mapSetArray) {
-        maps.Add(s);
+        maps[i - 1].Add(s);
     }
 }
 
 foreach (string seed in seeds) {
     int value = int.Parse(seed);
-    foreach (string map in maps) {
-        string[] mapSplit = map.Split(' ');
-        value = Map(value, int.Parse(mapSplit[0]), int.Parse(mapSplit[1]), int.Parse(mapSplit[2]));
+    foreach (List<string> mapSet in maps) {
+        foreach (string map in mapSet) {
+            string[] mapSplit = map.Split(' ');
+            int destinationRange = int.Parse(mapSplit[0]);
+            int sourceRange = int.Parse(mapSplit[1]);
+            int rangeLength = int.Parse(mapSplit[2]);
+            value = Map(value, destinationRange, sourceRange, rangeLength);
+        }
     }
     Console.WriteLine(value);
 }
@@ -40,7 +52,7 @@ foreach (string seed in seeds) {
 Console.WriteLine("*");
 
 return;
-*/
+
 
 int Map(int value, int destinationRange, int sourceRange, int rangeLength) {
     if (value >= sourceRange && value <= sourceRange + rangeLength) {
@@ -49,7 +61,9 @@ int Map(int value, int destinationRange, int sourceRange, int rangeLength) {
     return value;
 }
 
+/*
 int thing = 55;
+
 thing = Map(thing, 50, 98, 2);
 thing = Map(thing, 52, 50, 48);
 
@@ -76,3 +90,4 @@ thing = Map(thing, 60, 56, 37);
 thing = Map(thing, 56, 93, 4);
 
 Console.WriteLine(thing);
+*/
