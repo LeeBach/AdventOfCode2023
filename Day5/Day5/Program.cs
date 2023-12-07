@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-string inputTxt = File.ReadAllText(@"..\..\..\input\input.txt");
+﻿string inputTxt = File.ReadAllText(@"..\..\..\input\inputCopy.txt");
 
 string[] delimitingStrings = {
     "seed-to-soil map:",
@@ -14,9 +12,14 @@ string[] delimitingStrings = {
 
 string[] splitInput = inputTxt.Split(delimitingStrings, StringSplitOptions.None);
 
-List<string> seeds = new List<string>();
-foreach (string s in splitInput[0].Split(':')[1].Split(new char[] {'\r', '\n', ' '}, StringSplitOptions.RemoveEmptyEntries))
-    seeds.Add(s);
+List<List<string>> seedRanges = new List<List<string>>();
+string[] seedRangeStrings = splitInput[0].Split(':')[1].Split(new char[] { '\r', '\n', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+for (int i = 0; i < seedRangeStrings.Length; i += 2) {
+    seedRanges.Add(new List<string>());
+    seedRanges[i/2].Add(seedRangeStrings[i]);
+    seedRanges[i/2].Add(seedRangeStrings[i + 1]);
+}
 
 List<List<string>> maps = new List<List<string>> {
     new List<string>(),
@@ -27,35 +30,35 @@ List<List<string>> maps = new List<List<string>> {
     new List<string>(),
     new List<string>()
 };
+
 for (int i = 1; i <= 7; i++) {
     string[] mapSetArray = splitInput[i].Split(new char[] {'\r', '\n'}, StringSplitOptions.RemoveEmptyEntries);
-    string mapSetString = "";
     foreach (string s in mapSetArray) {
         maps[i - 1].Add(s);
     }
 }
 
-List<long> locations = new List<long>();
+long lowestLocation = long.MaxValue;
 
-foreach (string seed in seeds) {
-    long value = long.Parse(seed);
-    foreach (List<string> mapSet in maps) {
-        foreach (string map in mapSet) {
-            string[] mapSplit = map.Split(' ');
-            long destinationRange = long.Parse(mapSplit[0]);
-            long sourceRange = long.Parse(mapSplit[1]);
-            long rangeLength = long.Parse(mapSplit[2]);
-            if (value != Map(value, destinationRange, sourceRange, rangeLength)) {
-                value = Map(value, destinationRange, sourceRange, rangeLength);
-                break;
+foreach (List<string> seedRange in seedRanges) {
+    for (long i = long.Parse(seedRange[0]); i < long.Parse(seedRange[0]) + long.Parse(seedRange[1]); i++) {
+        long value = i;
+        foreach (List<string> mapSet in maps) {
+            foreach (string map in mapSet) {
+                string[] mapSplit = map.Split(' ');
+                long mappedValue = Map(value, long.Parse(mapSplit[0]), long.Parse(mapSplit[1]), long.Parse(mapSplit[2]));
+                if (value != mappedValue) {
+                    value = mappedValue;
+                    break;
+                }
             }
         }
+        if (value < lowestLocation)
+            lowestLocation = value;
     }
-    locations.Add(value);
 }
 
-locations.Sort();
-Console.WriteLine(locations[0]);
+Console.WriteLine(lowestLocation);
 
 Console.WriteLine("*");
 return;
