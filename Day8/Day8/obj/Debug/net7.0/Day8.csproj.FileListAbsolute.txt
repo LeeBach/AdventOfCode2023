@@ -1,0 +1,15 @@
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\bin\Debug\net7.0\Day8.exe
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\bin\Debug\net7.0\Day8.deps.json
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\bin\Debug\net7.0\Day8.runtimeconfig.json
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\bin\Debug\net7.0\Day8.dll
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\bin\Debug\net7.0\Day8.pdb
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\obj\Debug\net7.0\Day8.csproj.AssemblyReference.cache
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\obj\Debug\net7.0\Day8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\obj\Debug\net7.0\Day8.AssemblyInfoInputs.cache
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\obj\Debug\net7.0\Day8.AssemblyInfo.cs
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\obj\Debug\net7.0\Day8.csproj.CoreCompileInputs.cache
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\obj\Debug\net7.0\Day8.dll
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\obj\Debug\net7.0\refint\Day8.dll
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\obj\Debug\net7.0\Day8.pdb
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\obj\Debug\net7.0\Day8.genruntimeconfig.cache
+C:\Users\Magnu\Documents\GitHub\AdventOfCode2023\Day8\Day8\obj\Debug\net7.0\ref\Day8.dll
